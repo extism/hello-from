@@ -11,7 +11,7 @@ int32_t hello() {
   extism_load_input(input, length);
 
   char *out;
-  uint64_t total_len = length + 14; // \nHello from C!
+  uint64_t total_len = length + 15; // \nHello from C!
   out = (char *)malloc(total_len * sizeof(uint8_t));
 
   int n = snprintf(out, total_len, "%s\nHello from C!", input);
