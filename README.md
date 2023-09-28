@@ -19,20 +19,24 @@ make run
 
 ```bash
 Load plug-ins [Enter]> 
-Loaded 4 plugins in 163 ms
+Loaded 6 plugins in 905 ms
 Run plug-ins [Enter]> 
 Hello from Python!
 Hello from Rust!
 Hello from C!
+Hello From F#!
+Hello from Csharp!
 Hello from Go!
 Hello from JavaScript!
-Ran 4 plug-ins in 3.6659 ms
+Ran 6 plug-ins in 87.5158 ms
 Run plug-ins [Enter]> 
 Hello from Python!
 Hello from Rust!
 Hello from C!
+Hello From F#!
+Hello from C#!
 Hello from Go!
 Hello from JavaScript!
-Ran 4 plug-ins in 0.9642 ms
+Ran 6 plug-ins in 1.6611 ms
 ```
 
