@@ -2,7 +2,7 @@ A demo piping a string through a plug-in written in each PDK:
 Each plug-in exports a function that takes a string and appends `"Hello from $lang!"` to it. It effectively does this:
 
 ```
-rust(c(js(go("Hello from Python!"))))
+print(csharp(fsharp(rust(c(js(go("Hello from Python!")))))))
 ```
 
 Building (note: this won't setup all the dependencies for you):
