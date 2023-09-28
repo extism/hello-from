@@ -1,36 +1,38 @@
 A demo piping a string through a plug-in written in each PDK:
+Each plug-in exports a function that takes a string an appends "hello from $lang!" to it. It effectively does this:
 
-```python
-# run.py
+```
+rust(c(js(go("Hello from Python!"))))
+```
 
-def call_plugin(input, path):
-    plugin = extism.Plugin({"wasm": [{"path": path}]}, wasi=True)
-    return plugin.call('hello', input)
+Building (note: this won't setup all the dependencies for you):
 
-plugins = [
-    os.path.join("wasm", file)
-    for file in os.listdir("wasm")
-    if file.endswith(".wasm")
-]
-
-input = str.encode("Hello, World!")
-input = reduce(call_plugin, plugins, input)
-print(input.decode())
+```bash
+make build
 ```
 
 Running:
 
 ```bash
-python3 run.py
+make run
+```
+
+```bash
+Load plug-ins [Enter]> 
+Loaded 4 plugins in 163 ms
+Run plug-ins [Enter]> 
 Hello, World!
 Hello from Rust!
 Hello from C!
 Hello from Go!
 Hello from JavaScript!
+Ran 4 plug-ins in 3.6659 ms
+Run plug-ins [Enter]> 
+Hello, World!
+Hello from Rust!
+Hello from C!
+Hello from Go!
+Hello from JavaScript!
+Ran 4 plug-ins in 0.9642 ms
 ```
 
-Building:
-
-```bash
-sh build.sh
-```
