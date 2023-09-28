@@ -25,7 +25,7 @@ plugins = load_plugins()
 print(f"Loaded {len(plugins)} plugins in {int((time.time() - start) * 1000)} ms")
 
 while True:
-    inpt = str.encode("Hello, World!")
+    inpt = str.encode("Hello from Python!")
     input("Run plug-ins [Enter]> ")
     start = time.time()
     inpt = run_plugins(inpt)

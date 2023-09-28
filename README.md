@@ -1,5 +1,5 @@
 A demo piping a string through a plug-in written in each PDK:
-Each plug-in exports a function that takes a string an appends "hello from $lang!" to it. It effectively does this:
+Each plug-in exports a function that takes a string and appends `"Hello from $lang!"` to it. It effectively does this:
 
 ```
 rust(c(js(go("Hello from Python!"))))
@@ -21,14 +21,14 @@ make run
 Load plug-ins [Enter]> 
 Loaded 4 plugins in 163 ms
 Run plug-ins [Enter]> 
-Hello, World!
+Hello from Python!
 Hello from Rust!
 Hello from C!
 Hello from Go!
 Hello from JavaScript!
 Ran 4 plug-ins in 3.6659 ms
 Run plug-ins [Enter]> 
-Hello, World!
+Hello from Python!
 Hello from Rust!
 Hello from C!
 Hello from Go!
