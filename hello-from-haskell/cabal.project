@@ -1,0 +1,5 @@
+packages: ./hello-from-haskell.cabal
+
+package hello-from-haskell
+  ghc-options:
+    -optl -Wl,--export=hs_init -optl -Wl,--allow-undefined -no-hs-main -optl-mexec-model=reactor 
