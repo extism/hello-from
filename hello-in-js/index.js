@@ -29,7 +29,7 @@ async function main() {
   console.timeEnd("Loaded Plugins:")
   while (true) {
     answer = await readline.question("Run Plugins>")
-    let message = "Hello from Nodejs!"
+    let message = "Hello in Nodejs!"
     console.time("Ran Plugins:")
     for (const p of plugins) {
       message = (await p.call('hello', message)).string()
