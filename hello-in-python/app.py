@@ -9,27 +9,11 @@ def manifest(filename):
     return {"wasm": [{"path": os.path.join(WASM_DIR, filename)}]}
 
 def load_plugins():
-    # return [
-    #     extism.Plugin(manifest(filename), wasi=True)
-    #     for filename in os.listdir(WASM_DIR)
-    #     if filename.endswith(".wasm")
-    # ]
-    files = [
-            filename
-            for filename in os.listdir(WASM_DIR)
-            if filename.endswith(".wasm")
-            ]
-    plugins = []
-    for filename in files:
-        print(filename)
-        if filename.endswith("hello-from-c.wasm"):
-            continue
-        if filename.endswith("hello-from-haskell.wasm"):
-            continue
-        plugin = extism.Plugin(manifest(filename), wasi=True)
-        plugins.append(plugin)
-
-    return plugins
+    return [
+        extism.Plugin(manifest(filename), wasi=True)
+        for filename in os.listdir(WASM_DIR)
+        if filename.endswith(".wasm")
+    ]
 
 def run_plugins(inpt):
     return reduce(lambda i, p: p.call('hello', i), plugins, inpt)
