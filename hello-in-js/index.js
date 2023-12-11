@@ -17,7 +17,6 @@ function pluginPaths(directoryPath) {
   return fs
     .readdirSync(directoryPath)
     .filter(file => path.extname(file) === '.wasm')
-    .filter(file => !file.endsWith('haskell.wasm') && !file.endsWith('c.wasm'))
     .map(file => `${directoryPath}/${file}`)
 }
 
