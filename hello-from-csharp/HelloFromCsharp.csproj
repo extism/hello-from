@@ -11,6 +11,6 @@
     <TrimmerSingleWarn>false</TrimmerSingleWarn>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Extism.Pdk" Version="1.0.0-rc1" />
+    <PackageReference Include="Extism.Pdk" Version="1.0.0-rc8" />
   </ItemGroup>
 </Project>

@@ -9,4 +9,4 @@ edition = "2021"
 crate_type = ['cdylib']
 
 [dependencies]
-extism-pdk = "0.3.4"
+extism-pdk = "1.0.0-rc1"
